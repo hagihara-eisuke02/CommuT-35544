@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: "tamesi#index"
+  devise_for :users
+  
+  root to: "top#index"
 end

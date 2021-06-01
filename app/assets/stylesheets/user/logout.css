@@ -1,0 +1,23 @@
+.logout{
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  position: relative;
+  color: #990000;
+  border: solid 2px #990000;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logout:before {
+  background-color: #f1e2e2;
+  border-radius: 5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: -1;
+}

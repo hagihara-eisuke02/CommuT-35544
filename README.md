@@ -7,7 +7,7 @@
 
 | Column             | Type   | Options                  |  <!--ユーザー登録 -->
 | ------------------ | ------ | ------------------------ |
-| nickname           | string | null: false              |
+| name               | string | null: false              |
 | email              | string | unique:true, null: false |
 | encrypted_password | string | null: false              |
 

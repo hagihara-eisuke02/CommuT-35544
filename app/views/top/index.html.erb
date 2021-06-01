@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="main-title">
+  <h2 class='service-title'>
+    CommuTとは<br>「Communication」+「Treasure」
+    <br>コミュニケーションは宝物である
+  </h2>
+</div>
+
+<p class='service-subtitle1'>
+ すぐ見つかる。
+</p>
+
+<p class='service-subtitle2'>
+ すぐ繋がる。
+</p>
+
+<p class='service-subtitle3'>
+ それは<br>『コミュット』
+</p>
+
+<div class='main1'>
+  <div class='title-contents'>
+    <div class="a">
+      <%= image_tag "LOVE01.png", class:"ai" %>
+      <%= image_tag "test01.jpg", class:"ai" %>
+      <%= image_tag "NYBIRU.jpeg", class:"ai" %>
+    </div>
+</div>
+
+<%= link_to "#", method: :get, class: 'purchase-btn'  do %>
+  <span class='purchase-btn-text'></span> 
+  <%= image_tag 'touko.png' , size: '1000px' ,class: "purchase-btn-icon" %>
+  <%#= image_tag 'ittoku.png' , size: '100px' ,class: "purchase-btn-icon2" %>
+<% end %>
+
+<%= render "shared/footer" %>
