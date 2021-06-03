@@ -27,8 +27,27 @@
       <%= image_tag "NYBIRU.jpg", class:"ai" %>
     </div>
 </div>
+<div class='post-contents'>
+  <h2 class='post-title'>投稿一覧</h2>
+  <%= link_to '新規投稿順', new_post_path, method: :get,  class: "subtitle" %>
+  <ul class='post-lists'>
 
-<%= link_to "#", method: :get, class: 'purchase-btn'  do %>
+    <%# @post.each do |post| %>
+
+      <li class='list'>
+        <%= link_to root_path, method: :get do %>
+          <div class='post-img-content'>
+          </div>
+        <% end %>
+        <%# ここにいれる %>
+      </li>
+    <%# end %>
+  </ul>
+</div>
+
+
+
+<%= link_to new_post_path, method: :get, class: 'purchase-btn'  do %>
   <span class='purchase-btn-text'></span> 
   <%= image_tag 'touko.png' , size: '1000px' ,class: "purchase-btn-icon" %>
   <%#= image_tag 'ittoku.png' , size: '100px' ,class: "purchase-btn-icon2" %>

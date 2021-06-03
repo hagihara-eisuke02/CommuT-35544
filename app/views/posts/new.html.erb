@@ -1,0 +1,43 @@
+<header class="hed">
+  <%= render "shared/header" %>
+</header>
+
+<div class="posts-sell-contents">
+  <div class="posts-sell-main">
+    <h2 class="posts-sell-title">投稿フォーム</h2>
+    <%= form_with model:@posts_tag, url: posts_path, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="post-form">
+      <div class="new-posts">
+          タイトル入力
+          <span class="indispensable">必須</span>
+        <%= f.text_area :title, class:"title-text", id:"title", placeholder:"タイトル名（必須 40文字まで)", maxlength:"40" %>
+        <div class="posts-explain">
+          <div class="new-tag">
+            タグ入力
+            <%= f.text_field :tag_name, class:"input-tag", id:"name" %>
+          </div>
+          <div id="search-result"></div>
+          <div class="weight-bold-text">
+            メッセージ
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :message, class:"message-text", id:"message", placeholder:"メッセージ（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<footer>
+  <%= render "shared/second-footer"%>
+</footer>

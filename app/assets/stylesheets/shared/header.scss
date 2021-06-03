@@ -4,7 +4,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 0.5vh 10vw;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -24,6 +24,13 @@
 .icon {
   width: 10vw;
   margin-right: 10vw;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.icon:hover{
+  transform: rotateY( 360deg );
+  transition-duration: 0.5s;
 }
 
 .search-form {

@@ -38,19 +38,17 @@
 | Column      | Type       | Options           |  <!-- 掲示板投稿 -->
 | ----------- | ---------- | ----------------- |
 | title       | string     | null: false       |
-| tag         | string     | null: false       |
 | message     | text       | null: false       |
 | room_id     | references | foreign_key: true |
-| user        | references | foreign_key: true |
-| create_date | datetime   | null: false       |
+| user_id     | references | foreign_key: true |
 
 ### Association
 
 - has_many :user_posts
 - has_many :post_tags
-- has_many   :users, through: :user_posts
-- has_many   :tags,through: :post_tags
-- has_one    :room
+- has_many :users, through: :user_posts
+- has_many :tags,through: :post_tags
+- has_one  :room
 
 
 
@@ -70,9 +68,9 @@
 
 ## tags テーブル
 
-| Column | Type | Options     |  <!-- タグ機能 -->
-| ------ | ---- | ----------- |
-| name   | text | null: false |
+| Column     | Type | Options     |  <!-- タグ機能 -->
+| ---------- | ---- | ----------- |
+| tag_name   | text | null: false |
 
 ### Association
 
@@ -90,7 +88,7 @@
 ### Association
 
 - belongs_to :post
-- has_many :message
+- has_many   :message
 
 
 

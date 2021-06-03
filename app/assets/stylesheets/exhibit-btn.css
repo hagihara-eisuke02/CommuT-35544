@@ -6,6 +6,8 @@
   right: 32px;
   position: fixed;
   padding: 15px;
+  cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 .purchase-btn-text {
@@ -17,4 +19,9 @@
 
 .purchase-btn-icon {
   width: 60%;
+}
+
+.purchase-btn:hover{
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
 }
