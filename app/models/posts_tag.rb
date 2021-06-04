@@ -10,12 +10,15 @@ class PostsTag
     validates :user_id
   end
 
-  def save
+  def save(tag_list)
     post = Post.create(title: title, message: message, user_id: user_id)
-    tag = Tag.where(tag_name: tag_name).first_or_initialize
-    tag.save
 
-    PostTagRelation.create(post_id: post.id, tag_id: tag.id)
+      tag_list.each do |tag_name|
+      tag = Tag.where(tag_name: tag_name).first_or_initialize
+      tag.save
+
+      PostTagRelation.create(post_id: post.id, tag_id: tag.id)
+      end
   end
 
 end

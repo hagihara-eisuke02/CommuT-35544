@@ -1,0 +1,24 @@
+<header class="hed">
+  <%= render "shared/header" %>
+</header>
+
+<%# 投稿概要 %>
+
+<div class="posts-sell-contents">
+  <div class="post-title-show">
+  <%= "#{@post.title}" %>
+  </div>
+  <div class="item-box">
+    <h2 class="name1">
+      <br>
+      <% @post.tags.each do |tag| %>
+        <div class="tag-name-show">タグ</div>
+        <%=tag.tag_name%>
+      <%end%>
+      <br>
+      <%= "投稿内容：#{@post.message}" %>
+    </h2>
+  </div>
+</div>
+
+<%#= render "shared/footer" %>

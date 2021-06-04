@@ -16,7 +16,7 @@
 </p>
 
 <p class='service-subtitle3'>
- それは<br>『コミュット』
+ それは、『コミュット』
 </p>
 
 <div class='main1'>
@@ -29,19 +29,22 @@
 </div>
 <div class='post-contents'>
   <h2 class='post-title'>投稿一覧</h2>
-  <%= link_to '新規投稿順', new_post_path, method: :get,  class: "subtitle" %>
   <ul class='post-lists'>
 
-    <%# @post.each do |post| %>
+    <% @posts.each do |post| %>
 
       <li class='list'>
-        <%= link_to root_path, method: :get do %>
+        <%= link_to post_path(post.id), method: :get do %>
           <div class='post-img-content'>
+          <%= post.title %>
+          <%# @tags.each do |tag| %>
+          <%#= tag.tag_name %>
+          <%# end %>
           </div>
         <% end %>
         <%# ここにいれる %>
       </li>
-    <%# end %>
+    <% end %>
   </ul>
 </div>
 
