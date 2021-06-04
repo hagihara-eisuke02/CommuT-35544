@@ -6,7 +6,10 @@ class User < ApplicationRecord
   
   validates :name, presence: true
 
-  has_many :posts
+  has_many  :posts
+  # has_many :user_posts
+  # has_many :posts, through: :user_posts
+
   has_many :messages
 
 end

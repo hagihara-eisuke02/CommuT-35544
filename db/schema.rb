@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_081212) do
+ActiveRecord::Schema.define(version: 2021_06_04_023523) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(version: 2021_06_02_081212) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_user_posts_on_post_id"
+    t.index ["user_id"], name: "index_user_posts_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -74,4 +83,6 @@ ActiveRecord::Schema.define(version: 2021_06_02_081212) do
   add_foreign_key "post_tag_relations", "posts"
   add_foreign_key "post_tag_relations", "tags"
   add_foreign_key "posts", "users"
+  add_foreign_key "user_posts", "posts"
+  add_foreign_key "user_posts", "users"
 end
