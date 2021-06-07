@@ -5,20 +5,29 @@
 <%# 投稿概要 %>
 
 <div class="posts-sell-contents">
-  <div class="post-title-show">
-  <%= "#{@post.title}" %>
+  <%= "#{@post.user.name}さんの投稿表示" %>
+  <div class="posts-waku">
+    <div class="post-title-show">
+      <%= "#{@post.title}" %>
+    </div>
+    <div class="item-box">
+      <h2 class="post-main-show">
+        <br>
+        <div class="tag-title">タグ</div>
+        <% @post.tags.each do |tag| %>
+          <div class="tag-name">
+          <%=tag.tag_name%>
+          </div>
+        <%end%>
+        </h2>
+        <br>
+        <%= "投稿内容：#{@post.message}" %>
+    </div>
   </div>
-  <div class="item-box">
-    <h2 class="name1">
-      <br>
-      <% @post.tags.each do |tag| %>
-        <div class="tag-name-show">タグ</div>
-        <%=tag.tag_name%>
-      <%end%>
-      <br>
-      <%= "投稿内容：#{@post.message}" %>
-    </h2>
-  </div>
+</div>
+
+<div class="chat-page">
+  <%#= link_to post_path(post.id), method: :get do %>
 </div>
 
 <%#= render "shared/footer" %>

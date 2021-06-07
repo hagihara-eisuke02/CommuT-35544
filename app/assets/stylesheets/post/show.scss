@@ -1,15 +1,37 @@
-.post-title-show{
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
+.posts-waku{
   position: relative;
-  display: flex;
-  border: solid 3px;
 }
 
-.tag-name-show{
-  font-size: 50px;
+.post-title-show{
+  font-size: 25px;
+  background: #5fc2f5;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  font-weight: bold 1px;
+  
+}
+
+.tag-title{
+  width: 15%;
+  font-size: 20px;
   font-weight: bold;
 
-  border: solid 3px;
+  padding: 0.5px 1px;
+}
+
+.post-main-show{
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.tag-name{
+  font-size: 15px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
