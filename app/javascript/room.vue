@@ -90,13 +90,12 @@ export default {
         deviceInfos
         .filter(deviceInfo => deviceInfo.kind === 'audioinput')
         .map(audio => this.audios.push({text: audio.label || `Microphone ${this.audios.length + 1}`, value: audio.deviceId}));
-
+        
         //カメラの情報を取得
         deviceInfos
         .filter(deviceInfo => deviceInfo.kind === 'videoinput')
         .map(video => this.videos.push({text: video.label || `Camera  ${this.videos.length - 1}`, value: video.deviceId}));
-
-        console.log(this.audios, this.videos);        
+        console.log(this.audios, this.videos);
     }
 }
 </script>
