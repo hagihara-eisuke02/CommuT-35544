@@ -1,0 +1,9 @@
+.app{
+  text-align: center;
+}
+
+.video-wak{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}

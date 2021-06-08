@@ -10,24 +10,29 @@
     <div class="post-title-show">
       <%= "#{@post.title}" %>
     </div>
-    <div class="item-box">
-      <h2 class="post-main-show">
-        <br>
+    <div class="post-box">
+      <div class="post-tag-show">
         <div class="tag-title">タグ</div>
         <% @post.tags.each do |tag| %>
           <div class="tag-name">
           <%=tag.tag_name%>
           </div>
         <%end%>
-        </h2>
-        <br>
+      </div>
+      <br>
+      <div class="main-show">
         <%= "投稿内容：#{@post.message}" %>
+      </div>
+
+      <br>
+
+      <div class="rooms-page">
+        <%= link_to post_rooms_path(@post), method: :get, class: 'room-btn'  do %>
+          <%= image_tag 'Chatbtn.png' , size: '250x80' ,class: "room-go-btn" %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="chat-page">
-  <%#= link_to post_path(post.id), method: :get do %>
 </div>
 
 <%#= render "shared/footer" %>

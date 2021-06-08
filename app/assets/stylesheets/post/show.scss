@@ -1,29 +1,41 @@
 .posts-waku{
-  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: block;
 }
 
 .post-title-show{
+  // width: 50vh;
   font-size: 25px;
   background: #5fc2f5;
   padding: 4px;
-  text-align: center;
   color: #FFF;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-  font-weight: bold 1px;
-  
+  font-weight: bold 3px;
+  display: inline-block;
+}
+
+.post-box{
+  // max-width: 40%;
+	// margin: 10px auto 0 auto;
+  background-color: #FFF;
+  display: inline-block;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tag-title{
-  width: 15%;
+  display: inline-block;
   font-size: 20px;
   font-weight: bold;
-
-  padding: 0.5px 1px;
+  padding: 10px 0.2px;
 }
 
-.post-main-show{
+.post-tag-show{
   display: flex;
   text-align: left;
   align-items: center;
@@ -32,6 +44,8 @@
 .tag-name{
   font-size: 15px;
   margin-left: 10px;
-  display: flex;
-  align-items: center;
+}
+
+.main-show{
+  overflow-wrap: break-word;
 }
