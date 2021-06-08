@@ -5,20 +5,18 @@
 .top-page-header {
   width: 100vw;
   padding: 0.5vh 10vw;
-  display: flex;
   flex-direction: column;
   position: fixed;
   z-index: 2;
-  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed, url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg) fixed;
+  background-color: #a382fe;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-.search-bar-contents {
+.logo-contents {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .icon {
@@ -83,7 +81,13 @@
   margin-right: 5vw;
   color: #fdfafa;
   font-weight: bold;
+  transition: .1s ease-in-out;
 }
+
+.name_a:hover{
+  filter: brightness(80%);
+}
+
 
 
 .logout {
