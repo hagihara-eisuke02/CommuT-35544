@@ -1,28 +1,31 @@
 <template>
     <div id="app">
-        <video id="their-video" width="500" autoplay playsinline></video>
-        <video id="my-video" muted="true" width="500" autoplay playsinline></video>
-        <p>Your Peer ID: <span id="my-id">{{peerId}}</span></p>
-        <input v-model="calltoid" placeholder="call id">
-        <button @click="makeCall" class="button--green">Call</button>
-        <br />
+        <div class="zentai">
+            <div class="video-show">
+                <p>Your Peer ID: <span id="my-id">{{peerId}}</span></p>
+                <input v-model="calltoid" placeholder="call id">
+                <button @click="makeCall" class="button--green">Call</button>
+            </div>
+            <video id="their-video" width="300" autoplay playsinline></video>
+            <video id="my-video" muted="true" width="300" autoplay playsinline></video>
+            <br />
 
-        マイク:
-        <select v-model="selectedAudio" @change="onChange">
-          <option disabled value="">Please select one</option>
-          <option v-for="(audio, key, index) in audios" v-bind:key="index" :value="audio.value">
-            {{ audio.text }}
-          </option>
-        </select>
+            マイク:
+            <select v-model="selectedAudio" @change="onChange">
+            <option disabled value="">Please select one</option>
+            <option v-for="(audio, key, index) in audios" v-bind:key="index" :value="audio.value">
+                {{ audio.text }}
+            </option>
+            </select>
 
-        カメラ: 
-        <select v-model="selectedVideo" @change="onChange">
-          <option disabled value="">Please select one</option>
-          <option v-for="(video, key, index) in videos" v-bind:key="index" :value="video.value">
-            {{ video.text }}
-          </option>
-        </select>
-
+            カメラ: 
+            <select v-model="selectedVideo" @change="onChange">
+                <option disabled value="">Please select one</option>
+                <option v-for="(video, key, index) in videos" v-bind:key="index" :value="video.value">
+                    {{ video.text }}
+                </option>
+            </select>
+        </div>
     </div>
 </template>
 
@@ -90,20 +93,19 @@ export default {
         deviceInfos
         .filter(deviceInfo => deviceInfo.kind === 'audioinput')
         .map(audio => this.audios.push({text: audio.label || `Microphone ${this.audios.length + 1}`, value: audio.deviceId}));
-
+        
         //カメラの情報を取得
         deviceInfos
         .filter(deviceInfo => deviceInfo.kind === 'videoinput')
         .map(video => this.videos.push({text: video.label || `Camera  ${this.videos.length - 1}`, value: video.deviceId}));
-
-        console.log(this.audios, this.videos);        
+        console.log(this.audios, this.videos);
     }
 }
 </script>
 
 <style scoped>
     p {
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
     }
 </style>
