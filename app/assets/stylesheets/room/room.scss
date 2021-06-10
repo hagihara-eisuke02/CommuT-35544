@@ -1,0 +1,47 @@
+.post-title-room{
+  position: relative;
+  font-size: 25px;
+  background: #5fc2f5;
+  padding: 4px;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  font-weight: bold 3px;
+}
+
+#setumei{
+  font-size: 12px;
+  position: relative;
+  left: 60%;
+  background-color: lightgreen;
+}
+
+.chat-delete{
+  position: relative;
+  top: 2em;
+  left: 60%;
+  display: inline-block;
+  border-bottom: solid 4px #bd1111;
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transition: .100s;
+  transition: .100s;
+  z-index: 2;
+}
+
+.chat-delete:hover {
+  border-bottom: none;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+
+.chat-main{
+  position: relative;
+  display: list-item;
+  left: 1em;
+  overflow: scroll;
+}

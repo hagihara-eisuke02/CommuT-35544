@@ -1,0 +1,33 @@
+<header class="hedw">
+  <%= render "shared/second-header" %>
+</header>
+
+<div class="post-title-room">
+<%= "タイトル：#{@post.title}" %>
+</div>
+
+<div id="room">
+<%# <span id="video-end">ビデオ通話を止める</span> %>
+ <room />
+</div>
+
+
+<%= javascript_pack_tag 'room' %>
+<%= stylesheet_pack_tag 'room' %>
+
+<span id="setumei">
+  ※ビデオを開始できるのは２名までです。<br>
+  ※ビデオチャットを開始する場合は、「Your Peer ID」に書かれているIDを<br>
+  　ビデオチャット相手に教えてあげてください。<br>
+  　ID通知された方は「Call id」へ入力し[call]ボタンを押すとビデオチャットが開始します。<br>
+</span>
+
+<div class="chat-delete">
+  <%= link_to "チャットを退出する", "/"%>
+</div>
+
+<div class="chat-btn">
+<%= link_to new_post_message_path, method: :get do %>
+<h1>チャットはこちら</h1>
+<% end %>
+</div>

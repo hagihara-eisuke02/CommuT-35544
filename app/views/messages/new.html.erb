@@ -1,0 +1,11 @@
+<h3>mini-talk-app</h3>
+<%= form_with model: [@post, @message], local: true do |f| %>
+  <%= f.text_field :text %>
+  <%= f.submit '送信' %>
+<% end %>
+<div id='messages'>
+  <%# @messages.each do |message| %>
+    <p><%#= message.text %></p>
+  <%# end %>
+</div>
+
