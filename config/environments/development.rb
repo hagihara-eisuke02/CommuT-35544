@@ -60,3 +60,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+
+# config.action_cable.allowed_request_origins = [ 'http://your-server-address' ]
+# config.web_console.whitelisted_ips = 'crient-server-address'

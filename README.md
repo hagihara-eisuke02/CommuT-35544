@@ -23,7 +23,7 @@
 | Column      | Type       | Options           |  <!-- 掲示板投稿 -->
 | ----------- | ---------- | ----------------- |
 | title       | string     | null: false       |
-| message     | text       | null: false       |
+| sentence    | string     | null: false       |
 | room_id     | references | foreign_key: true |
 | user_id     | references | foreign_key: true |
 
@@ -32,7 +32,7 @@
 - belongs_to :users
 - has_many   :post_tags
 - has_many   :tags,through: :post_tags
-- has_one    :room
+- has_many   :room
 
 
 
@@ -64,27 +64,13 @@
 
 ## rooms テーブル
 
-| Column    | Type   | Options     |  <!-- チャットルーム -->
-| --------- | ------ | ----------- |
-| title_id  | text   | null: false |
+| Column   | Type       | Options                        |  <!-- チャットルーム -->
+| -------- | ---------- | ------------------------------ |
+| video    |            |                                |
+| text     | string     |                                |
+| post     | references | null: false, foreign_key: true |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :post
-- has_many   :message
-
-
-
-## messages テーブル
-
-| Column   | Type   | Options     |  <!-- チャットルーム中 -->
-| -------- | ------ | ----------- |
-| text     | text   | null: false |
-| contents | string |             |
-| image    | string | null: false |
-| user_id  | string | null: false |
-
-### Association
-
-- belongs_to :room
 - belongs_to :user

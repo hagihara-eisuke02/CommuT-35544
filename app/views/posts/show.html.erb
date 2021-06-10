@@ -21,13 +21,13 @@
       </div>
       <br>
       <div class="main-show">
-        <%= "投稿内容：#{@post.message}" %>
+        <%= "投稿内容：#{@post.sentence}" %>
       </div>
 
       <br>
 
       <div class="rooms-page">
-        <%= link_to post_rooms_path(@post), method: :get, class: 'room-btn'  do %>
+        <%= link_to post_messages_path(@post), method: :get, class: 'room-btn'  do %>
           <%= image_tag 'Chatbtn.png' , size: '250x80' ,class: "room-go-btn" %>
         <% end %>
       </div>
