@@ -5,7 +5,7 @@
 
 ## users テーブル
 
-| Column             | Type   | Options                  |  <!--ユーザー登録 -->
+| Column             | Type   | Options                  |
 | ------------------ | ------ | ------------------------ |
 | name               | string | null: false              |
 | email              | string | unique:true, null: false |
