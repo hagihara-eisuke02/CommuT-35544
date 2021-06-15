@@ -20,7 +20,7 @@
 
 ## posts テーブル
 
-| Column      | Type       | Options           |  <!-- 掲示板投稿 -->
+| Column      | Type       | Options           |
 | ----------- | ---------- | ----------------- |
 | title       | string     | null: false       |
 | sentence    | string     | null: false       |
@@ -38,7 +38,7 @@
 
 ## post_tag_relations テーブル
 
-| Column  | Type       | Options                        |<!-- 掲示板投稿とタグの中間テーブル -->
+| Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | post_id | references | null: false, foreign_key: true |
 | tag_id  | references | null: false, foreign_key: true |
@@ -52,7 +52,7 @@
 
 ## tags テーブル
 
-| Column     | Type | Options     |  <!-- タグ機能 -->
+| Column     | Type | Options     |
 | ---------- | ---- | ----------- |
 | tag_name   | text | null: false |
 
@@ -64,7 +64,7 @@
 
 ## message テーブル
 
-| Column   | Type       | Options                        |  <!-- チャット機能 -->
+| Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
 | text     | string     |                                |
 | post     | references | null: false, foreign_key: true |
