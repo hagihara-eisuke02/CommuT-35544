@@ -4,27 +4,22 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @message = Message.new
-    # @messages = Message.order(id: "DESC")
-    # @message = Message.find(params[:message_id])
+    @messages = @post.message.includes(:user)
   end
   
   def new
     @messages = Message.all
     @message = Message.new
-    # @messages = @post.message.includes(:user)
-    # @message = @post.message.build
   end
 
   def create
-    @message = Message.new(text: params[:message][:text])
+    @message = Message.new(message_params)
+    @user = current_user 
     if @message.save
-      ActionCable.server.broadcast 'message_channel', content: @message
+      ActionCable.server.broadcast "message_channel", content: @message, user: @user
     else
-      render :new
+      render :index
     end
-  end
-
-  def show
   end
 
   private
@@ -33,8 +28,8 @@ class MessagesController < ApplicationController
     @post = Post.find(params[:post_id])
   end
 
-  # def message_params
-  #   params.require(:message).permit(:text, :image).merge(user_id: current_user.id)
-  # end
+  def message_params
+    params.require(:message).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
+  end
 
 end

@@ -5,6 +5,8 @@ class Message < ApplicationRecord
 
 
   validates :text, presence: true
+  validates :post_id, presence: true
+  # validates :user_id, presence: true
 
   # def was_attached?
   #   self.image.attached?

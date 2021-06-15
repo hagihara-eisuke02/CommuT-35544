@@ -32,7 +32,7 @@
 - belongs_to :users
 - has_many   :post_tags
 - has_many   :tags,through: :post_tags
-- has_many   :room
+- has_many   :message
 
 
 
@@ -62,15 +62,15 @@
 
 
 
-## rooms テーブル
+## message テーブル
 
-| Column   | Type       | Options                        |  <!-- チャットルーム -->
+| Column   | Type       | Options                        |  <!-- チャット機能 -->
 | -------- | ---------- | ------------------------------ |
-| video    |            |                                |
 | text     | string     |                                |
 | post     | references | null: false, foreign_key: true |
 | user     | references | null: false, foreign_key: true |
 
 ### Association
 
+- belongs_to :post
 - belongs_to :user
