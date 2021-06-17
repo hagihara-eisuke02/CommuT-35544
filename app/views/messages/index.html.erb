@@ -6,37 +6,50 @@
 <%= "タイトル：#{@post.title}" %>
 </div>
 
-<div id="room">
-<%# <span id="video-end">ビデオ通話を止める</span> %>
- <room />
-</div>
+<div class="chat-room-zen">
+  <div class="chat-delete">
+    <%= link_to "チャットを退出する", "/"%>
+  </div>
 
-<%= javascript_pack_tag 'room' %>
-<%= stylesheet_pack_tag 'room' %>
+  <div id="room">
+  <%# <span id="video-end">ビデオ通話を止める</span> %>
+  <room />
+  </div>
+  
+  <%= javascript_pack_tag 'room' %>
+  <%= stylesheet_pack_tag 'room' %>
 
-<span id="setumei">
-  ※ビデオを開始できるのは２名までです。<br>
-  ※ビデオチャットを開始する場合は、「Your Peer ID」に書かれているIDを<br>
-  　ビデオチャット相手に教えてあげてください。<br>
-  　ID通知された方は「Call id」へ入力し[call]ボタンを押すとビデオチャットが開始します。<br>
-</span>
-
-<div class="chat-delete">
-  <%= link_to "チャットを退出する", "/"%>
-</div>
-
-<div class="chat-main">
-  <h3>チャット</h3>
-  <%= form_with model: [@post, @message], local: false do |f| %>
-    <%= f.text_field :text %>
-    <%= f.submit '送信' %>
-  <% end %>
-
-  <div id='messages'>
-    <% @messages.reverse_each do |message| %>
-      <p><%= message.user.name %></p>
-      <p><%= message.text %></p>
+  <div class="chat-main">
+    <h3>チャット</h3>
+    <span id="setumei">
+      ※音声通話・ビデオを開始できるのは２名までです。<br>
+      ※マイクのみ設定して話すことも可能です。<br>
+      ※ビデオチャットを開始する場合は、「Your Peer ID」に書かれているIDを<br>
+      　ビデオチャット相手に教えてあげてください。<br>
+      　ID通知された方は「Call id」へ入力し[call]ボタンを押すとビデオチャットが開始します。<br>
+    </span>
+    <%= form_with model: [@user, @post, @message], local: false do |f| %>
+      <%= f.text_field :text %>
+      <%= f.submit '送信' %>
     <% end %>
+
+    <div id='messages'>
+      <% @messages.reverse_each do |message| %>
+        <% if @post.user.name == message.user.name %>
+          <div class="user-chat-right">
+            <p><%= message.user.name %>
+            <%= message.created_at %></p>
+            <p><%= message.text %></p>
+          </div>
+        <% else %>
+          <div class="user-chat-left">
+            <p><%= message.user.name %>
+            <%= message.created_at %></p>
+            <p><%= message.text %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 

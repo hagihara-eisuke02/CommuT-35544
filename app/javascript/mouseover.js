@@ -24,29 +24,3 @@ $(function () {
     $(".service-title").css({ "color": "" });
   })
 });
-
-
-$(function () {
-  $(document).on("mouseover", ".service-subtitle1", function () {
-    $(".service-subtitle1").css({ "color": "yellow" });
-  }).on("mouseout", ".service-subtitle1", function () {
-    $(".service-subtitle1").css({ "color": "" });
-  })
-});
-
-$(function () {
-  $(document).on("mouseover", ".service-subtitle2", function () {
-    $(".service-subtitle2").css({ "color": "red" });
-  }).on("mouseout", ".service-subtitle2", function () {
-    $(".service-subtitle2").css({ "color": "" });
-  })
-});
-
-
-// $(function () {
-//   $(document).on("mouseover", ".purchase-btn-icon2", function () {
-//     $(".purchase-btn-icon2");
-//   }).on("mouseout", ".purchase-btn-icon", function () {
-//     $(".purchase-btn-icon");
-//   })
-// });

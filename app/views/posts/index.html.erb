@@ -9,18 +9,6 @@
   </h2>
 </div>
 
-<p class='service-subtitle1'>
- すぐ見つかる。
-</p>
-
-<p class='service-subtitle2'>
- すぐ繋がる。
-</p>
-
-<p class='service-subtitle3'>
- それは、『コミュット』
-</p>
-
 <div class='main1'>
   <div class='title-contents'>
     <div class="a">
@@ -30,21 +18,23 @@
     </div>
 </div>
 <div class='post-contents'>
-  <h2 class='post-title'>投稿一覧</h2>
+  <h2 class='post-list-name'>投稿一覧</h2>
+  <%= paginate @posts %>
   <ul class='post-lists'>
 
     <% @posts.each do |post| %>
 
       <li class='list'>
-        <%= link_to post_path(post.id), method: :get do %>
-          <div class='post-img-content'>
-          <%= post.title %>
-          <%# @tags.each do |tag| %>
-          <%#= tag.tag_name %>
-          <%# end %>
+          <div class='post-title'>
+            <%= link_to post_path(post.id), method: :get do %>
+              <%= post.title %>
+            <% end %>
           </div>
-        <% end %>
-        <%# ここにいれる %>
+          <div class="post-tag-show">
+            <% @post_tag_relation.each do |post| %>
+              <%= tag.tag_name %>
+            <% end %>
+          </div>
       </li>
     <% end %>
   </ul>

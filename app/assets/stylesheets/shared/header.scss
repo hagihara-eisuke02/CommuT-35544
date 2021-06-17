@@ -8,10 +8,11 @@
   flex-direction: column;
   position: fixed;
   z-index: 2;
-  background-color: #a382fe;
+  background: linear-gradient(to right, #2af598 0%, #009efd 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  opacity: 0.98;
 }
 
 .logo-contents {

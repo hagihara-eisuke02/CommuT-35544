@@ -1,3 +1,8 @@
+.chat-room-zen{
+  margin-left: 30px;
+  background-color: white;
+}
+
 .post-title-room{
   position: relative;
   font-size: 25px;
@@ -12,15 +17,16 @@
 
 #setumei{
   font-size: 12px;
-  position: relative;
-  left: 60%;
-  background-color: lightgreen;
+  height: 12vh;
+  float: right;
+  margin-right: 100px;
+  background: linear-gradient(transparent, rgb(82, 243, 123));
 }
 
 .chat-delete{
   position: relative;
   top: 2em;
-  left: 60%;
+  left: 70%;
   display: inline-block;
   border-bottom: solid 4px #bd1111;
   border-radius: 8px;
@@ -40,8 +46,35 @@
 }
 
 .chat-main{
-  position: relative;
-  display: list-item;
-  left: 1em;
+  display: inline-block;
+  width: 100vw;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+#messages{
+  display: inline-block;
+  height: 50vh;
+  width: 57vw;
+  padding:0;
   overflow: scroll;
+  font-size: 80%;
+  left: 2em;
+  right: 2em;
+  color: #474747;
+  background:  rgb(157, 223, 250);
+  border-radius: 10px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.user-chat-right{
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.user-chat-left{
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
 }
