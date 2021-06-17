@@ -5,7 +5,6 @@ class PostsController < ApplicationController
     @posts = Post.order(id: :DESC)
     @tags = Tag.order(id: :DESC)
     @post_tag_relation = PostTagRelation.all
-    @posts = Post.all.page(params[:page]).per(10)
   end
 
   def new
