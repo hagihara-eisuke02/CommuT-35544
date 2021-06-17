@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         onChange: function(){
-            if(this.selectedAudio != '' && this.selectedVideo != ''){
+            if(this.selectedAudio != '' || this.selectedVideo != ''){
                 this.connectLocalCamera();
             }
         },
