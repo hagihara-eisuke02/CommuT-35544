@@ -8,6 +8,7 @@
 | Column             | Type   | Options                  |
 | ------------------ | ------ | ------------------------ |
 | name               | string | null: false              |
+| image              | string | null: false              |
 | email              | string | unique:true, null: false |
 | encrypted_password | string | null: false              |
 
