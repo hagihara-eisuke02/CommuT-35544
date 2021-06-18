@@ -19,19 +19,23 @@
 </div>
 <div class='post-contents'>
   <h2 class='post-list-name'>投稿一覧</h2>
+  <div class="pageing">
+    <%= paginate @posts %>
+  </div>
   <ul class='post-lists'>
 
     <% @posts.each do |post| %>
-
+    
       <li class='list'>
           <div class='post-title'>
             <%= link_to post_path(post.id), method: :get do %>
               <%= post.title %>
             <% end %>
           </div>
+          <h2 id="tag-name-tag">タグ：</h2>
           <div class="post-tag-show">
-            <% @post_tag_relation.each do |post| %>
-              <%= tag.tag_name %>
+            <% post.tags.each do |tag| %>
+              <%=tag.tag_name%>
             <% end %>
           </div>
       </li>
