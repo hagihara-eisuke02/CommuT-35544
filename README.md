@@ -16,7 +16,7 @@
 新規登録画面<br>
 ![registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/7c238bdeb6ed39c0020f623ad0a8a141574eee03/README-images/registration-image.png)<br>
  ログイン画面<br>
-![login-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/26a36552a66f5b7261009a7f9c2cce397bb8707f/README-images/rogin-image.png)<br>
+![login-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/3e6daa1c413bb3e2231af0bcb03e961e3b6e2595/README-images/rogin-image.png)<br>
  投稿フォーム<br>
 ![post-in.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-in.png)<br>
  トップページ<br>
