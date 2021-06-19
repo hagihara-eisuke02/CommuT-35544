@@ -21,8 +21,13 @@
  投稿フォーム<br>
 ![post-in.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-in.png)<br>
  トップページ<br>
-![post-list](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-list.png)<br>
- 
+![post-list.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-list.png)<br>
+ 投稿内容<br>
+![post-show.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/c68caa2dc8bb12e5a1fcf2e62ccd762384629307/README-images/post-show.png)<br>
+ チャット入室＆非同期テキストチャット<br>
+![chat-main.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/c68caa2dc8bb12e5a1fcf2e62ccd762384629307/README-images/chat-main.png)<br>
+ ビデオチャット＆非同期テキストチャット<br>
+![chat-video-main.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/c68caa2dc8bb12e5a1fcf2e62ccd762384629307/README-images/chat-video-main.png)<br>
  
  
  
