@@ -29,17 +29,22 @@
   align-items: center;
 }
 
-.tag-title{
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px 0.2px;
-}
-
 .post-tag-show{
   display: flex;
   text-align: left;
   align-items: center;
+  padding-right: 1vw;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+}
+
+.tag-title{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(250, 197, 252);
+  border: 15px solid transparent;
+  border-top: 15px solid rgb(250, 197, 252);
 }
 
 .tag-name{
@@ -47,6 +52,15 @@
   margin-left: 10px;
 }
 
-.main-show{
-  overflow-wrap: break-word;
+.post-message{
+  width: 50vw;
+}
+
+#post-show{
+  font-size: 30px;
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+
+.post-show-message{
+  padding-top: 2vh;
 }

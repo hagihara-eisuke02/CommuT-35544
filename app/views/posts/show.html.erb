@@ -20,8 +20,13 @@
         <%end%>
       </div>
       <br>
-      <div class="main-show">
-        <%= "投稿内容：#{@post.sentence}" %>
+      <div class="post-message">
+        <span id="post-show">
+        メッセージ内容<br>
+        </span>
+          <div class="post-show-message">
+          <%=safe_join(@post.sentence.split("\n"),tag(:br))%>
+        </div>
       </div>
 
       <br>
@@ -35,4 +40,4 @@
   </div>
 </div>
 
-<%#= render "shared/footer" %>
+<%= render "shared/footer" %>
