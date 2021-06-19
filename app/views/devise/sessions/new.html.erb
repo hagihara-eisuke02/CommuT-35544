@@ -29,6 +29,12 @@
   <div class='login-btn'>
     <%= f.submit "ログイン" ,class:"login-bull-btn" %>
   </div>
+  <div class="registrations-page">
+    <h2 class='form-bottom-text'>
+      「アカウント登録」は
+      <%= link_to 'こちら', new_user_registration_path, class: "sign-up" %>
+    </h2>
+  </div>
 </div>
 <% end %>
   </div>
