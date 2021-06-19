@@ -15,7 +15,7 @@
 
 ## ・DEMO<br>
 　新規登録画面<br>
-![registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/9c03150db2d733730f27601bb6344fb6ed8ed5a6/registration-image.png)
+![registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/7c238bdeb6ed39c0020f623ad0a8a141574eee03/README-images/registration-image.png)
 
 
 ## ・実装予定
