@@ -15,10 +15,17 @@
 
 ## ・DEMO<br>
 　新規登録画面<br>
-![registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/7c238bdeb6ed39c0020f623ad0a8a141574eee03/README-images/registration-image.png)
+![registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/7c238bdeb6ed39c0020f623ad0a8a141574eee03/README-images/registration-image.png)<br>
  ログイン画面<br>
-![login-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/26a36552a66f5b7261009a7f9c2cce397bb8707f/README-images/rogin-image.png)
-
+![login-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/26a36552a66f5b7261009a7f9c2cce397bb8707f/README-images/rogin-image.png)<br>
+ 投稿フォーム<br>
+![post-in.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-in.png)<br>
+ トップページ<br>
+![post-list](https://github.com/hagihara-eisuke02/CommuT-35544/blob/d428b172fd192a0cb5fde9aa2a520a2ca7d6f876/README-images/post-list.png)<br>
+ 
+ 
+ 
+ 
 ## ・実装予定
 　
 
