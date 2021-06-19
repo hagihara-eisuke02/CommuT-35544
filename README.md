@@ -14,7 +14,7 @@
 　手軽にすぐ話せる、すぐ繋がれるを目標に新規登録後すぐに投稿ができる仕様となっているのも特徴です。
 
 ## ・DEMO<br>
-　[registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/9c03150db2d733730f27601bb6344fb6ed8ed5a6/registration-image.png)
+! 　[registration-image.png](https://github.com/hagihara-eisuke02/CommuT-35544/blob/9c03150db2d733730f27601bb6344fb6ed8ed5a6/registration-image.png)
 
 
 ## ・実装予定
