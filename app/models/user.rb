@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   
-  # mount_uploader :image, ImageUploader
+   mount_uploader :image, ImageUploader
 
   has_many :posts
   has_many :messages
