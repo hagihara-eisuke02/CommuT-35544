@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @messages = Message.all
     @message = Message.new
     @messages = @post.message.includes(:user)
+
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
   
   def new
