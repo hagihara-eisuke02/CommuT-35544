@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :name, presence: true
-  mount_uploader :image, ImageUploader
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+  
+  # mount_uploader :image, ImageUploader
 
   has_many :posts
   has_many :messages
