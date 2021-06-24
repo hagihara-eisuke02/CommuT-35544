@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :show,:create, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @posts = Post.order(id: :DESC)
@@ -33,6 +34,12 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:posts_tag).permit(:title, :tag_name, :sentence).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
